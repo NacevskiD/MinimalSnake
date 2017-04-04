@@ -10,7 +10,7 @@ import java.util.*;
 
 public class Snake extends TimerTask implements KeyListener {
 
-    int height = 300; int width = 400;   //pixels
+    int height = 400; int width = 500;   //pixels
     int squareSize = 50;
     
     int speed = 300;   // 300 = update every 300 ms.  Larger number = slower game
@@ -88,10 +88,10 @@ public class Snake extends TimerTask implements KeyListener {
             }
 
             else {                             // Game is not over. Draw snake and kibble, wherever they are.
-                g.setColor(Color.BLUE);
+                g.setColor(Color.GREEN);
                 g.fillRect(kibble[0] * squareSize, kibble[1] * squareSize, squareSize, squareSize);
 
-                g.setColor(Color.RED);
+                g.setColor(Color.YELLOW);
                 for (int[] square : snake) {
                     g.fillRect(square[0] * squareSize, square[1] * squareSize, squareSize, squareSize);
                 }
